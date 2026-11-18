@@ -124,6 +124,19 @@
   ul.plain { margin: 0; padding-left: 1.1rem; font-size: 1rem; }
   ul.plain li { margin-bottom: 0.5rem; }
 
+  /* 맛집 카드 */
+  .area {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--main);
+    background: #eef2ff;
+    border-radius: 2rem;
+  }
+  .food h3 { margin: 0.5rem 0 0.6rem; font-size: 1.5rem; line-height: 1.35; }
+  .btn.map { margin: 0.6rem 0 0; font-size: 1.25rem; padding: 0.9rem 0.6rem; }
+
   .empty { text-align: center; font-size: 1.3rem; color: var(--sub); padding: 3rem 1rem; }
 </style>
 </head>
@@ -196,7 +209,95 @@
 
   <!-- 맛집 탭 -->
   <section class="panel" id="panel-food" role="tabpanel" aria-labelledby="tab-food" hidden>
-    <div class="card empty">맛집 정보는<br>곧 추가됩니다 🙂</div>
+    <div class="card food">
+      <span class="area">📍 해운대</span>
+      <h3>바다마루전복죽</h3>
+      <div class="row"><div class="k">대표 메뉴</div><div class="v">전복죽</div></div>
+      <div class="row"><div class="k">가격대</div><div class="v">13,000원 ~ 18,000원</div></div>
+      <div class="row"><div class="k">웨이팅</div><div class="v">없음</div></div>
+      <a class="btn map" href="https://naver.me/5mI03xa7" target="_blank" rel="noopener">네이버 지도 보기</a>
+    </div>
+
+    <div class="card food">
+      <span class="area">📍 해운대</span>
+      <h3>할매복국</h3>
+      <div class="row"><div class="k">대표 메뉴</div><div class="v">복지리 (복국)</div></div>
+      <div class="row"><div class="k">가격대</div><div class="v">15,000원 ~ 27,000원</div></div>
+      <div class="row"><div class="k">웨이팅</div><div class="v">거의 없음</div></div>
+      <a class="btn map" href="https://naver.me/59vo5rOH" target="_blank" rel="noopener">네이버 지도 보기</a>
+    </div>
+
+    <div class="card food">
+      <span class="area">📍 해운대</span>
+      <h3>맛찬들왕소금구이 해운대점</h3>
+      <div class="row"><div class="k">대표 메뉴</div><div class="v">숙성 생삼겹살</div></div>
+      <div class="row"><div class="k">가격대</div><div class="v">1인분(130g) 15,000원</div></div>
+      <div class="row"><div class="k">웨이팅</div><div class="v">없음</div></div>
+      <a class="btn map" href="https://naver.me/GSDACPH7" target="_blank" rel="noopener">네이버 지도 보기</a>
+    </div>
+
+    <div class="card food">
+      <span class="area">📍 해운대 (좌동)</span>
+      <h3>해운대 가야밀면</h3>
+      <div class="row"><div class="k">대표 메뉴</div><div class="v">밀면, 비빔면</div></div>
+      <div class="row"><div class="k">가격대</div><div class="v">10,000원 ~ 11,000원</div></div>
+      <div class="row"><div class="k">웨이팅</div><div class="v">자주 있음</div></div>
+      <a class="btn map" href="https://naver.me/xIeXEr9W" target="_blank" rel="noopener">네이버 지도 보기</a>
+    </div>
+
+    <div class="card food">
+      <span class="area">📍 해운대 (재송동)</span>
+      <h3>양산왕돼지국밥</h3>
+      <div class="row"><div class="k">대표 메뉴</div><div class="v">돼지국밥, 순대</div></div>
+      <div class="row"><div class="k">가격대</div><div class="v">돼지국밥 9,500원, 순대 12,000원</div></div>
+      <div class="row"><div class="k">웨이팅</div><div class="v">없음</div></div>
+      <a class="btn map" href="https://naver.me/5S9Q4o5d" target="_blank" rel="noopener">네이버 지도 보기</a>
+    </div>
+
+    <div class="card food">
+      <span class="area">📍 기장</span>
+      <h3>기장종가집곰장어</h3>
+      <div class="row"><div class="k">대표 메뉴</div><div class="v">짚불곰장어, 양념곰장어</div></div>
+      <div class="row"><div class="k">가격대</div><div class="v">30,000원</div></div>
+      <div class="row"><div class="k">웨이팅</div><div class="v">거의 없음</div></div>
+      <a class="btn map" href="https://naver.me/GDafoJRM" target="_blank" rel="noopener">네이버 지도 보기</a>
+    </div>
+
+    <div class="card food">
+      <span class="area">📍 용호동 (이기대 근처)</span>
+      <h3>선창횟집</h3>
+      <div class="row"><div class="k">대표 메뉴</div><div class="v">모듬회</div></div>
+      <div class="row"><div class="k">가격대</div><div class="v">소 60,000원부터</div></div>
+      <div class="row"><div class="k">웨이팅</div><div class="v">거의 없음</div></div>
+      <a class="btn map" href="https://naver.me/FCAC4e27" target="_blank" rel="noopener">네이버 지도 보기</a>
+    </div>
+
+    <div class="card food">
+      <span class="area">📍 영도</span>
+      <h3>영도해녀촌</h3>
+      <div class="row"><div class="k">대표 메뉴</div><div class="v">성게알, 해물라면</div></div>
+      <div class="row"><div class="k">가격대</div><div class="v">각 10,000원</div></div>
+      <div class="row"><div class="k">웨이팅</div><div class="v">거의 없음</div></div>
+      <a class="btn map" href="https://naver.me/GCvq1edv" target="_blank" rel="noopener">네이버 지도 보기</a>
+    </div>
+
+    <div class="card food">
+      <span class="area">📍 영도</span>
+      <h3>왔다식당</h3>
+      <div class="row"><div class="k">대표 메뉴</div><div class="v">스지된장전골</div></div>
+      <div class="row"><div class="k">가격대</div><div class="v">1인분 15,000원</div></div>
+      <div class="row"><div class="k">웨이팅</div><div class="v">식사 시간엔 있을 수 있음</div></div>
+      <a class="btn map" href="https://naver.me/F74VaAV7" target="_blank" rel="noopener">네이버 지도 보기</a>
+    </div>
+
+    <div class="card food">
+      <span class="area">📍 부산역</span>
+      <h3>화교대반점</h3>
+      <div class="row"><div class="k">대표 메뉴</div><div class="v">탕수육, 짜장면</div></div>
+      <div class="row"><div class="k">가격대</div><div class="v">탕수육(소) 15,000원, 짜장면 7,000원</div></div>
+      <div class="row"><div class="k">웨이팅</div><div class="v">거의 없음</div></div>
+      <a class="btn map" href="https://naver.me/FJbWJIh9" target="_blank" rel="noopener">네이버 지도 보기</a>
+    </div>
   </section>
 </main>
 
