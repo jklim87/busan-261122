@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>부산 여행 안내</title>
+<style>
+  :root {
+    --bg: #f3f5f8;
+    --card: #ffffff;
+    --text: #111827;
+    --sub: #4b5563;
+    --line: #d1d5db;
+    --main: #1d4ed8;
+    --green: #03a94d;
+    --warn-bg: #fff4e5;
+    --warn-line: #f59e0b;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 20px; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    line-height: 1.5;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  /* 상단 탭 */
+  .tabs {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    background: var(--bg);
+    border-bottom: 2px solid var(--line);
+  }
+  .tab {
+    flex: 1;
+    padding: 0.9rem 0.4rem;
+    font: inherit;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--sub);
+    background: var(--card);
+    border: 3px solid var(--line);
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .tab[aria-selected="true"] {
+    color: #fff;
+    background: var(--main);
+    border-color: var(--main);
+  }
+
+  main { padding: 0.8rem 0.6rem 3rem; max-width: 40rem; margin: 0 auto; }
+  .panel[hidden] { display: none; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    padding: 1.1rem 1rem;
+    margin-bottom: 0.9rem;
+  }
+  .card h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1.15rem;
+    color: var(--main);
+  }
+  .big { font-size: 1.45rem; font-weight: 800; line-height: 1.4; margin: 0; }
+  .note { font-size: 0.95rem; color: var(--sub); margin: 0.4rem 0 0; }
+
+  /* 버튼 */
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 1.1rem 0.6rem;
+    font: inherit;
+    font-size: 1.45rem;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: var(--green);
+    border: 0;
+    border-radius: 1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.18);
+  }
+  .btn.call { background: var(--main); margin: 0.8rem 0 0; font-size: 1.25rem; }
+  .btn:active { transform: translateY(2px); box-shadow: none; }
+
+  /* 바우처 */
+  .dates { display: flex; gap: 0.5rem; margin-bottom: 0.4rem; }
+  .date {
+    flex: 1;
+    background: #eef2ff;
+    border-radius: 0.8rem;
+    padding: 0.7rem 0.4rem;
+    text-align: center;
+  }
+  .date span { display: block; font-size: 1rem; color: var(--sub); font-weight: 700; }
+  .date strong { display: block; font-size: 1.3rem; line-height: 1.35; }
+
+  .row { padding: 0.7rem 0; border-top: 1px solid var(--line); }
+  .row .k { font-size: 0.95rem; color: var(--sub); font-weight: 700; }
+  .row .v { font-size: 1.25rem; font-weight: 700; }
+  .row .v small { display: block; font-size: 0.95rem; font-weight: 400; color: var(--sub); }
+
+  .warn {
+    background: var(--warn-bg);
+    border: 2px solid var(--warn-line);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.9rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+  ul.plain { margin: 0; padding-left: 1.1rem; font-size: 1rem; }
+  ul.plain li { margin-bottom: 0.5rem; }
+
+  .empty { text-align: center; font-size: 1.3rem; color: var(--sub); padding: 3rem 1rem; }
+</style>
+</head>
+<body>
+
+<div class="tabs" role="tablist">
+  <button class="tab" role="tab" id="tab-hotel" aria-controls="panel-hotel" aria-selected="true">🏨 호텔</button>
+  <button class="tab" role="tab" id="tab-food" aria-controls="panel-food" aria-selected="false">🍚 맛집</button>
+</div>
+
+<main>
+  <!-- 호텔 탭 -->
+  <section class="panel" id="panel-hotel" role="tabpanel" aria-labelledby="tab-hotel">
+
+    <div class="card">
+      <h2>호텔 주소</h2>
+      <p class="big">부산 해운대구 해운대해변로 287 씨클라우드</p>
+    </div>
+
+    <a class="btn" href="https://naver.me/xyTtRNQr" target="_blank" rel="noopener">📍 호텔 가는 길 보기</a>
+
+    <div class="card">
+      <h2>호텔 바우처 (예약 확인서)</h2>
+
+      <div class="dates">
+        <div class="date"><span>체크인</span><strong>11월 22일<br>(일)</strong></div>
+        <div class="date"><span>체크아웃</span><strong>11월 24일<br>(화)</strong></div>
+      </div>
+      <p class="note">2026년, 2박 3일</p>
+
+      <div class="row" style="margin-top:0.8rem">
+        <div class="k">예약 번호 (Booking ID)</div>
+        <div class="v" style="font-size:1.6rem; letter-spacing:0.03em">2068454782</div>
+      </div>
+      <div class="row">
+        <div class="k">예약자 이름</div>
+        <div class="v">Yong Whan Lim</div>
+      </div>
+      <div class="row">
+        <div class="k">숙소명</div>
+        <div class="v">썬클라우드호텔<small>Suncloud Hotel</small></div>
+      </div>
+      <div class="row">
+        <div class="k">숙소 주소</div>
+        <div class="v">부산 해운대구 해운대해변로 287, 6층<small>우편번호 48095</small></div>
+      </div>
+      <div class="row">
+        <div class="k">객실 수 / 인원</div>
+        <div class="v">객실 2개 / 성인 4명<small>아동 0명, 간이 침대 0개</small></div>
+      </div>
+      <div class="row">
+        <div class="k">객실 타입</div>
+        <div class="v">디럭스 킹룸 (저층, 부분 오션뷰)<small>Low Floor Deluxe Partial Ocean View King Room</small></div>
+      </div>
+      <div class="row">
+        <div class="k">예약 사이트</div>
+        <div class="v">아고다 (Agoda)<small>회원 ID 297972643 · 반짝 특가 25% 할인 · 결제 완료 (Visa)</small></div>
+      </div>
+      <div class="row">
+        <div class="k">호텔 전화번호</div>
+        <div class="v">051-746-3700</div>
+      </div>
+    </div>
+
+    <div class="warn">
+      ⚠️ 체크인할 때 예약자(Yong Whan Lim) 본인 신분증과 이 예약 확인서 화면을 보여주세요.
+    </div>
+
+  </section>
+
+  <!-- 맛집 탭 -->
+  <section class="panel" id="panel-food" role="tabpanel" aria-labelledby="tab-food" hidden>
+    <div class="card empty">맛집 정보는<br>곧 추가됩니다 🙂</div>
+  </section>
+</main>
+
+<script>
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      window.scrollTo(0, 0);
+    });
+  });
+</script>
+</body>
+</html>
